@@ -51,7 +51,6 @@ public class AuthController {
 		
 		if (passwordEncoder.matches(password, userDetails.getPassword())) {
 			Map<String, String> claims = new HashMap<>();
-			claims.put("name", "Test");
 			claims.put("username", username);
 			
 			String authorities = userDetails.getAuthorities().stream()
