@@ -1,6 +1,6 @@
-# Stateless JWT Authentication with Spring Boot
+# JWT Authentication with Spring Boot’s inbuilt OAuth2 Resource Server
 
-**This repo hosts the source code corresponding to the article [Stateless JWT Authentication with Spring Boot — A better approach](https://loneidealist.medium.com/stateless-jwt-authentication-with-spring-boot-a-better-approach-1f5dbae6c30f)**.
+**This repo hosts the source code corresponding to the article [JWT Authentication with Spring Boot’s inbuilt OAuth2 Resource Server](https://loneidealist.medium.com/stateless-jwt-authentication-with-spring-boot-a-better-approach-1f5dbae6c30f)**.
 
 This example project demonstrates the usage of Spring Boot OAuth2 Resource Server
 with JWT configuration to protect a REST API with JWT based authentication.
