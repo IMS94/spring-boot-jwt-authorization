@@ -14,5 +14,5 @@ import lombok.RequiredArgsConstructor;
 public class LoginResult {
 	
 	@NonNull
-	private String jwt;
+	private String token;
 }
