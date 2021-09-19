@@ -1,9 +1,10 @@
-# JWT Authentication with Spring Boot’s inbuilt OAuth2 Resource Server
+# Role Based Access Control (RBAC) with Spring Boot and JWT
 
-**This repo hosts the source code corresponding to the article [JWT Authentication with Spring Boot’s inbuilt OAuth2 Resource Server](https://loneidealist.medium.com/stateless-jwt-authentication-with-spring-boot-a-better-approach-1f5dbae6c30f)**.
+This repo hosts the source code for the article **Role Based Access Control (RBAC) with Spring Boot and JWT**.
 
-This example project demonstrates the usage of Spring Boot OAuth2 Resource Server
-with JWT configuration to protect a REST API with JWT based authentication.
+This example project demonstrates how to use the Spring Boot's inbuilt OAuth2 Resoure Server to authenticate and 
+authorize REST APIs with JWT. First, we have enabled **JWT authentication** and secondly, have introduced 
+**Role Based Access Control (RBAC)** by mapping a roles claim in JWT to granted authorities in Spring Security.
 
 Furthermore, provides a "/login" endpoint to generate and issue JWTs upon
 successful login by the users.
@@ -12,9 +13,14 @@ This approach is ideal to be used as the
 **backend for a single page application (SPA)** written using a frontend framework like
 ReactJS, Angular, etc...
 
-## Solution Overview
+## Role Based Access Control
+An example of role based access control.
 
-![Solution Overview](https://github.com/IMS94/spring-boot-jwt-authentication/blob/master/solution_overview.png?raw=true "Solution Overview")
+![RBAC Example](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/rbac_sample.png?raw=true "Solution Overview")
+
+## JWT Authentication - Solution Overview
+
+![Solution Overview](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/solution_overview.png?raw=true "Solution Overview")
 
 ## Getting Started
 
@@ -24,5 +30,5 @@ ReactJS, Angular, etc...
 ## Endpoints
 
 - `/login` -> Public endpoint which returns a signed JWT for valid user credentials (username/password)
-- `/user` -> A protected endpoint which returns the user details of the 
-requesting user.
+- `/products` -> Contains several endpoints to add and remove product entities. Protected by JWT authentication and
+authorized based on role.
