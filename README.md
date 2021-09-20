@@ -13,12 +13,16 @@ This approach is ideal to be used as the
 **backend for a single page application (SPA)** written using a frontend framework like
 ReactJS, Angular, etc...
 
+## Solution Overview
+
+![Solution Overview](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/authorization_process.png?raw=true "Solution Overview")
+
 ## Role Based Access Control
 An example of role based access control.
 
 ![RBAC Example](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/rbac_sample.png?raw=true "Solution Overview")
 
-## JWT Authentication - Solution Overview
+## JWT Authentication Overview
 
 ![Solution Overview](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/solution_overview.png?raw=true "Solution Overview")
 
