@@ -1,6 +1,6 @@
 # Role Based Access Control (RBAC) with Spring Boot and JWT
 
-This repo hosts the source code for the article **Role Based Access Control (RBAC) with Spring Boot and JWT**.
+This repo hosts the source code for the article [**Role Based Access Control (RBAC) with Spring Boot and JWT**](https://medium.com/geekculture/role-based-access-control-rbac-with-spring-boot-and-jwt-bc20a8c51c15?source=github_source).
 
 This example project demonstrates how to use the Spring Boot's inbuilt OAuth2 Resoure Server to authenticate and 
 authorize REST APIs with JWT. First, we have enabled **JWT authentication** and secondly, have introduced 
