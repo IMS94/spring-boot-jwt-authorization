@@ -45,10 +45,10 @@ class RbacWebMvcTests {
     @Autowired
     private MockMvc mockMvc;
 
-    @org.springframework.boot.test.mock.mockito.MockBean
+    @org.springframework.test.context.bean.override.mockito.MockitoBean
     private ProductService productService;
 
-    @org.springframework.boot.test.mock.mockito.MockBean
+    @org.springframework.test.context.bean.override.mockito.MockitoBean
     private JwtDecoder jwtDecoder;
 
     @Test
