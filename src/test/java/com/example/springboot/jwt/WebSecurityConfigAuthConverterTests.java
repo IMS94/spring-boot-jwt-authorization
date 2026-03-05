@@ -15,11 +15,12 @@ import static org.mockito.Mockito.mock;
 
 class WebSecurityConfigAuthConverterTests {
 
-    private final WebSecurityConfig webSecurityConfig = new WebSecurityConfig(mock(PasswordEncoder.class));
+    private final WebSecurityConfig webSecurityConfig = new WebSecurityConfig(
+            mock(PasswordEncoder.class), "http://localhost:3000");
 
     @Test
     void rolesClaimIsMappedToAuthoritiesWithoutPrefix() {
-        JwtAuthenticationConverter converter = webSecurityConfig.authenticationConverter();
+        JwtAuthenticationConverter converter = webSecurityConfig.jwtAuthenticationConverter();
         Jwt jwt = Jwt.withTokenValue("token")
                 .header("alg", "none")
                 .claim("roles", "ADMIN STAFF_MEMBER")
@@ -36,7 +37,7 @@ class WebSecurityConfigAuthConverterTests {
 
     @Test
     void missingRolesClaimReturnsEmptyAuthorities() {
-        JwtAuthenticationConverter converter = webSecurityConfig.authenticationConverter();
+        JwtAuthenticationConverter converter = webSecurityConfig.jwtAuthenticationConverter();
         Jwt jwt = Jwt.withTokenValue("token")
                 .header("alg", "none")
                 .claim("username", "user1")
@@ -49,7 +50,7 @@ class WebSecurityConfigAuthConverterTests {
 
     @Test
     void onlyRolesClaimIsUsedForAuthorities() {
-        JwtAuthenticationConverter converter = webSecurityConfig.authenticationConverter();
+        JwtAuthenticationConverter converter = webSecurityConfig.jwtAuthenticationConverter();
         Jwt jwt = Jwt.withTokenValue("token")
                 .header("alg", "none")
                 .claim("roles", "MANAGER")
